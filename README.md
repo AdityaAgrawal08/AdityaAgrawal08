@@ -15,13 +15,9 @@
 
 ## 📊 GitHub Stats
 
-<!--START_SECTION:counters-->
-<p align="center">
-  📦 <b>15</b> public repos &nbsp;·&nbsp; ⭐ <b>17</b> stars &nbsp;·&nbsp; 🍴 <b>0</b> forks &nbsp;·&nbsp; 👥 <b>17</b> followers
-</p>
-
+<!--START_SECTION:last-updated-->
 <sub>Last updated: 2026-10-17 UTC · refreshes every Monday</sub>
-<!--END_SECTION:counters-->
+<!--END_SECTION:last-updated-->
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=AdityaAgrawal08&show_icons=true&hide_rank=true&theme=tokyonight&hide_border=true" />
@@ -29,25 +25,6 @@
 </p>
 <p align="center">
   <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaAgrawal08&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-</p>
-
-## 🏆 Top Repositories
-
-<!--START_SECTION:top-repos-->
-| Repository | About | Language | ⭐ Stars | Updated |
-|---|---|---|---|---|
-| [Airline_Customer_Tweets_Analysis](https://github.com/AdityaAgrawal08/Airline_Customer_Tweets_Analysis) | — | Jupyter Notebook | 2 | 2026-03-30 |
-| [Online-Compiler](https://github.com/AdityaAgrawal08/Online-Compiler) | — | TypeScript | 2 | 2026-04-02 |
-| [telegram_bot](https://github.com/AdityaAgrawal08/telegram_bot) | — | Python | 2 | 2026-05-15 |
-| [NexVault](https://github.com/AdityaAgrawal08/NexVault) | — | TypeScript | 2 | 2026-07-08 |
-| [text-editor](https://github.com/AdityaAgrawal08/text-editor) | — | C | 2 | 2026-08-24 |
-| [quick-share](https://github.com/AdityaAgrawal08/quick-share) | — | TypeScript | 2 | 2026-10-10 |
-<!--END_SECTION:top-repos-->
-
-## 🐍 Contributions
-
-<p align="center">
-  <img src="dist/github-snake.svg" alt="Contribution graph snake" />
 </p>
 
 ## 📫 Contact

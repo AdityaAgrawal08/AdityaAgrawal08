@@ -6,9 +6,9 @@ between the START_SECTION / END_SECTION markers in README.md. Everything
 outside those markers is left untouched. Stdlib only, no dependencies.
 
 Sections owned by this script:
-  - counters    (repo/star/fork/follower totals + last-updated stamp)
-  - tech-stack  (language badges from live byte totals, forks excluded)
-  - top-repos   (top repos by stars, tiebreak: most recently pushed)
+  - tech-stack    (language badges from live byte totals, forks excluded)
+  - last-updated  (refresh stamp; also guarantees a weekly commit so the
+                   schedule is never auto-disabled for inactivity)
 """
 
 import json
@@ -22,8 +22,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 README_PATH = os.path.join(ROOT, "README.md")
 
 TOP_LANGUAGES = 8
-TOP_REPOS = 6
-MAX_DESC = 96
 
 # language -> (badge color, simple-icons logo slug or None, logo color).
 # Logo slugs were verified against cdn.simpleicons.org; anything missing
@@ -95,15 +93,8 @@ def badge(language):
     return f"![{language}]({url})"
 
 
-def build_counters(user, stars, forks):
+def build_updated_stamp():
     return (
-        "<p align=\"center\">\n"
-        f"  \U0001f4e6 <b>{user['public_repos']}</b> public repos"
-        f" &nbsp;\u00b7&nbsp; \u2b50 <b>{stars}</b> stars"
-        f" &nbsp;\u00b7&nbsp; \U0001f374 <b>{forks}</b> forks"
-        f" &nbsp;\u00b7&nbsp; \U0001f465 <b>{user['followers']}</b> followers\n"
-        "</p>\n"
-        "\n"
         f"<sub>Last updated: {datetime.now(timezone.utc):%Y-%m-%d} UTC"
         " \u00b7 refreshes every Monday</sub>"
     )
@@ -114,30 +105,6 @@ def build_tech_stack(lang_bytes):
         :TOP_LANGUAGES
     ]
     return "\n".join(badge(lang) for lang, _ in top)
-
-
-def build_top_repos(repos):
-    # Stars descending, tiebreak: most recently pushed first.
-    # Two stable sorts because the keys need opposite directions.
-    ranked = sorted(repos, key=lambda r: r.get("pushed_at", ""), reverse=True)
-    ranked = sorted(
-        ranked, key=lambda r: r.get("stargazers_count", 0), reverse=True
-    )[:TOP_REPOS]
-    lines = [
-        "| Repository | About | Language | \u2b50 Stars | Updated |",
-        "|---|---|---|---|---|",
-    ]
-    for r in ranked:
-        desc = (r.get("description") or "\u2014").replace("|", "\\|")
-        if len(desc) > MAX_DESC:
-            desc = desc[: MAX_DESC - 1] + "\u2026"
-        pushed = (r.get("pushed_at") or "")[:10] or "\u2014"
-        lines.append(
-            f"| [{r['name']}]({r['html_url']}) | {desc}"
-            f" | {r.get('language') or '\u2014'}"
-            f" | {r.get('stargazers_count', 0)} | {pushed} |"
-        )
-    return "\n".join(lines)
 
 
 def replace_section(text, name, new_inner):
@@ -156,9 +123,9 @@ def replace_section(text, name, new_inner):
 
 
 def main():
-    user = api_get(f"https://api.github.com/users/{USER}")
+    api_get(f"https://api.github.com/users/{USER}")  # fail fast if API is down
     repos = fetch_repos()
-    # Profile repo itself (USER/USER) never ranks: it holds this README.
+    # Profile repo itself (USER/USER) never counts: it holds this README.
     active = [
         r
         for r in repos
@@ -166,9 +133,6 @@ def main():
         and not r.get("archived")
         and r.get("name", "").lower() != USER.lower()
     ]
-
-    stars = sum(r.get("stargazers_count", 0) for r in active)
-    forks = sum(r.get("forks_count", 0) for r in active)
 
     lang_bytes = {}
     for r in active:
@@ -180,9 +144,8 @@ def main():
     with open(README_PATH, encoding="utf-8") as f:
         text = f.read()
 
-    text = replace_section(text, "counters", build_counters(user, stars, forks))
     text = replace_section(text, "tech-stack", build_tech_stack(lang_bytes))
-    text = replace_section(text, "top-repos", build_top_repos(active))
+    text = replace_section(text, "last-updated", build_updated_stamp())
 
     with open(README_PATH, encoding="utf-8") as f:
         old = f.read()
