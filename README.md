@@ -2,42 +2,26 @@
 
 ## 🧰 Tech Stack
 
-**Languages**
-
-![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+<!--START_SECTION:tech-stack-->
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter_Notebook-DA5B0B?style=for-the-badge)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML-e34c26?style=for-the-badge)
 ![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-**Backend & Data**
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-
-**Frontend**
-
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
-**Systems & Tools**
-
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)
-![Fish](https://img.shields.io/badge/Fish-4EA94B?style=for-the-badge&logo=fishshell&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-89e051?style=for-the-badge&logo=gnubash&logoColor=black)
+<!--END_SECTION:tech-stack-->
 
 ## 📊 GitHub Stats
+
+<!--START_SECTION:counters-->
+<p align="center">
+  📦 <b>15</b> public repos &nbsp;·&nbsp; ⭐ <b>17</b> stars &nbsp;·&nbsp; 🍴 <b>0</b> forks &nbsp;·&nbsp; 👥 <b>17</b> followers
+</p>
+
+<sub>Last updated: 2026-10-17 UTC · refreshes every Monday</sub>
+<!--END_SECTION:counters-->
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=AdityaAgrawal08&show_icons=true&hide_rank=true&theme=tokyonight&hide_border=true" />
@@ -45,6 +29,25 @@
 </p>
 <p align="center">
   <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaAgrawal08&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
+</p>
+
+## 🏆 Top Repositories
+
+<!--START_SECTION:top-repos-->
+| Repository | About | Language | ⭐ Stars | Updated |
+|---|---|---|---|---|
+| [Airline_Customer_Tweets_Analysis](https://github.com/AdityaAgrawal08/Airline_Customer_Tweets_Analysis) | — | Jupyter Notebook | 2 | 2026-03-30 |
+| [Online-Compiler](https://github.com/AdityaAgrawal08/Online-Compiler) | — | TypeScript | 2 | 2026-04-02 |
+| [telegram_bot](https://github.com/AdityaAgrawal08/telegram_bot) | — | Python | 2 | 2026-05-15 |
+| [NexVault](https://github.com/AdityaAgrawal08/NexVault) | — | TypeScript | 2 | 2026-07-08 |
+| [text-editor](https://github.com/AdityaAgrawal08/text-editor) | — | C | 2 | 2026-08-24 |
+| [quick-share](https://github.com/AdityaAgrawal08/quick-share) | — | TypeScript | 2 | 2026-10-10 |
+<!--END_SECTION:top-repos-->
+
+## 🐍 Contributions
+
+<p align="center">
+  <img src="dist/github-snake.svg" alt="Contribution graph snake" />
 </p>
 
 ## 📫 Contact
